@@ -12,4 +12,10 @@ add_executable(Proyecto_1 main.cpp
         Tienda.h
         Vehiculo.cpp
         Vehiculo.h
+        Nitro.cpp
+        Nitro.h
+        Llantas.cpp
+        Llantas.h
+        Motor.cpp
+        Motor.h
 )
