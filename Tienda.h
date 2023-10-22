@@ -2,29 +2,17 @@
 // Created by keilo on 10/22/2023.
 //
 
-#ifndef PROYECTO_1_ITEM_H
-#define PROYECTO_1_ITEM_H
+#ifndef PROYECTO_1_TIENDA_H
+#define PROYECTO_1_TIENDA_H
 
-#include <iostream>
+#include "Item.h"
 
-using namespace std;
+class Tienda : public Item { // Clase decorator
+    protected:
+        Item* ptrItem;
 
-class Item { // Clase abstracta // Interfaz
+        bool estado;
     public:
-        string id;
-
-        string nombre;
-
-        int precio;
-
-        int traccion;
-
-        int velocidad;
-
-        int potencia;
-
-        virtual ~Item();
-
         virtual string &getId() const = 0; // Metodo virtual puro
 
         virtual void setId(const string &id) = 0; // Metodo virtual puro
@@ -51,4 +39,4 @@ class Item { // Clase abstracta // Interfaz
 };
 
 
-#endif //PROYECTO_1_ITEM_H
+#endif //PROYECTO_1_TIENDA_H

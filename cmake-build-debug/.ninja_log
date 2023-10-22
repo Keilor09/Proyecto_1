@@ -1,7 +1,8 @@
 # ninja log v5
 0	384	7196950739482795	CMakeFiles/Proyecto_1.dir/main.cpp.obj	36530e5dca88debf
+2	234	7196976138098268	build.ninja	6298290a6a9febfa
 11	387	7196950739512807	CMakeFiles/Proyecto_1.dir/Item.cpp.obj	f1c9b34398c62b8d
 15	406	7196950739703207	CMakeFiles/Proyecto_1.dir/Jugador.cpp.obj	b64bacdeddd832be
-406	629	7196950741911992	Proyecto_1.exe	8de0e8ddc96ab3ec
-2	234	7196975181894810	build.ninja	6298290a6a9febfa
 2	129	7196975183795259	Proyecto_1.exe	64da3246d16df6ae
+2	343	7196977834455402	CMakeFiles/Proyecto_1.dir/Tienda.cpp.obj	4622b7cfe155ff01
+344	440	7196977835396972	Proyecto_1.exe	8683082709f3ca10

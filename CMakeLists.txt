@@ -9,4 +9,6 @@ add_executable(Proyecto_1 main.cpp
         Jugador.h
         Lista.h
         Nodo.h
+        Tienda.cpp
+        Tienda.h
 )
