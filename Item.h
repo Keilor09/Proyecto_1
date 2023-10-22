@@ -9,45 +9,45 @@
 
 using namespace std;
 
-class Item {
-    private:
-        string id;
-        string nombre;
-        int precio;
-        int traccion;
-        int velocidad;
-        int potencia;
-
+class Item { // Clase abstracta // Interfaz
     public:
-        Item(const string &id, const string &nombre, int precio, int traccion, int velocidad, int potencia);
+        string id;
 
-        Item();
+        string nombre;
+
+        int precio;
+
+        int traccion;
+
+        int velocidad;
+
+        int potencia;
 
         virtual ~Item();
 
-        const string &getId() const;
+        virtual string &getId() const = 0;
 
-        void setId(const string &id);
+        virtual void setId(const string &id) = 0;
 
-        const string &getNombre() const;
+        virtual string &getNombre() const = 0;
 
-        void setNombre(const string &nombre);
+        virtual void setNombre(const string &nombre) = 0;
 
-        int getPrecio() const;
+        virtual int getPrecio() const = 0;
 
-        void setPrecio(int precio);
+        virtual void setPrecio(int precio) = 0;
 
-        int getTraccion() const;
+        virtual int getTraccion() const = 0;
 
-        void setTraccion(int traccion);
+        virtual void setTraccion(int traccion) = 0;
 
-        int getVelocidad() const;
+        virtual int getVelocidad() const = 0;
 
-        void setVelocidad(int velocidad);
+        virtual void setVelocidad(int velocidad) = 0;
 
-        int getPotencia() const;
+        virtual int getPotencia() const = 0;
 
-        void setPotencia(int potencia);
+        virtual void setPotencia(int potencia) = 0;
 };
 
 
