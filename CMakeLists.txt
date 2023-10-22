@@ -5,4 +5,9 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(Proyecto_1 main.cpp
         Item.cpp
-        Item.h)
+        Item.h
+        Jugador.cpp
+        Jugador.h
+        Lista.h
+        Nodo.h
+)

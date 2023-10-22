@@ -21,9 +21,9 @@ class Item {
     public:
         Item(const string &id, const string &nombre, int precio, int traccion, int velocidad, int potencia);
 
-    Item();
+        Item();
 
-    virtual ~Item();
+        virtual ~Item();
 
         const string &getId() const;
 
