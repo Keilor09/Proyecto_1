@@ -10,7 +10,7 @@
 class Nitro : public Tienda {
     public:
 
-    Nitro(Item* ptrItem, bool estado);
+    Nitro(Item* ptrItem, bool estado, string id, string nombre, int precio, int velocidad);
 
     string getId() ; // Metodo virtual puro
 
@@ -37,6 +37,15 @@ class Nitro : public Tienda {
     void setPotencia(int potencia); // Metodo virtual puro
 
     string toString(); // Metodo virtual puro;
+
+    virtual void aumentarPotencia();
+
+    virtual void aumentarTraccion();
+
+    virtual void aumentarVelocidad();
+
+    virtual void aumentarPrecio();
+
 
 };
 

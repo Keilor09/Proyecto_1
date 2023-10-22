@@ -4,34 +4,38 @@
 
 #include "Nitro.h"
 
-Nitro::Nitro(Item* ptrItem, bool estado) {
+Nitro::Nitro(Item* ptrItem, bool estado, string id, string nombre, int precio, int velocidad) {
     this->ptrItem = ptrItem;
     this->estado = estado;
+    this->nombre = nombre;
+    this->id = id;
+    this->precio = precio;
+    this->velocidad = velocidad;
 }
 
 string Nitro::getId()  {
-    return this->ptrItem->getId();
+    return this->id;
 }
 
 
 void Nitro::setId(const string &id)  {
-    this->ptrItem->setId(id);
+    this->id = id;
 }
 
 string Nitro::getNombre()  {
-    return this->ptrItem->getNombre();
+    return this->nombre;
 }
 
 void Nitro::setNombre(const string &nombre)  {
-    this->ptrItem->setNombre(nombre);
+    this->nombre = nombre;
 }
 
 int Nitro::getPrecio()  {
-    return this->ptrItem->getPrecio();
+    return this->precio;
 }
 
 void Nitro::setPrecio(int precio)  {
-    this->ptrItem->setPrecio(precio);
+    this->precio = precio;
 }
 
 int Nitro::getTraccion()  {
@@ -43,11 +47,11 @@ void Nitro::setTraccion(int traccion)  {
 }
 
 int Nitro::getVelocidad()  {
-    return this->ptrItem->getVelocidad();
+    return this->velocidad;
 }
 
 void Nitro::setVelocidad(int velocidad)  {
-    this->ptrItem->setVelocidad(velocidad);
+    this->velocidad =  velocidad;
 }
 
 int Nitro::getPotencia()  {
@@ -58,8 +62,26 @@ void Nitro::setPotencia(int potencia)  {
     this->ptrItem->setPotencia(potencia);
 }
 
+void Nitro::aumentarPotencia() {
+
+}
+
+void Nitro::aumentarTraccion() {
+
+}
+
+void Nitro::aumentarVelocidad() {
+    this->ptrItem->setVelocidad(this->ptrItem->getVelocidad()+ this->velocidad);
+}
+
+void Nitro::aumentarPrecio() {
+    this->ptrItem->setPrecio(ptrItem->getPrecio() + this->precio);
+}
+
 string Nitro::toString() {
     stringstream s;
     s << this->ptrItem->toString() << endl;
+    s << "Nombre: " << this->nombre << " Precio: " << this->precio;
     return s.str();
 }
+

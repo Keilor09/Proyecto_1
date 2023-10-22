@@ -7,15 +7,17 @@
 
 #include <iostream>
 #include "Lista.h"
+#include "Vehiculo.h"
+
 using namespace std;
 class Jugador {
     private:
         string id;
         string nombre;
         float dineroDisponible;
-        //Lista<Vehiculo> vehiculosDisponibles;
+        Lista<Vehiculo>* vehiculosDisponibles;
     public:
-        Jugador(const string &id, const string &nombre, float dineroDisponible);
+        Jugador(const string &id, const string &nombre, float dineroDisponible, Lista<Vehiculo>*);
 
         Jugador();
 
@@ -32,6 +34,10 @@ class Jugador {
         float getDineroDisponible() const;
 
         void setDineroDisponible(float dineroDisponible);
+
+        Lista<Vehiculo>* getVehiculosDisponibles();
+
+        void setVehiculosDisponibles(Lista<Vehiculo>*);
 
 };
 

@@ -4,14 +4,15 @@
 
 #include "Jugador.h"
 
-Jugador::Jugador(const string &id, const string &nombre, float dineroDisponible) : id(id), nombre(nombre),
-                                                                                   dineroDisponible(dineroDisponible) {}
-
+Jugador::Jugador(const string &id, const string &nombre, float dineroDisponible, Lista<Vehiculo>* vehiculosDisponibles) : id(id), nombre(nombre),
+                                                                                   dineroDisponible(dineroDisponible),
+                                                                                   vehiculosDisponibles(new Lista<Vehiculo>()){}
 
 Jugador::Jugador() {
     id = "";
     nombre = "";
     dineroDisponible = 0.0;
+    vehiculosDisponibles = NULL;
 }
 
 
@@ -41,4 +42,12 @@ float Jugador::getDineroDisponible() const {
 
 void Jugador::setDineroDisponible(float dineroDisponible) {
     Jugador::dineroDisponible = dineroDisponible;
+}
+
+Lista<Vehiculo>* Jugador::getVehiculosDisponibles() {
+    return this->vehiculosDisponibles;
+}
+
+void Jugador::setVehiculosDisponibles(Lista<Vehiculo>* lista) {
+    this->vehiculosDisponibles = lista;
 }

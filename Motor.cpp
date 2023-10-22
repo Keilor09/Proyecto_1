@@ -58,6 +58,22 @@ void Motor::setPotencia(int potencia)  {
     this->ptrItem->setPotencia(potencia);
 }
 
+void Motor::aumentarPotencia() {
+    this->ptrItem->setPotencia(this->ptrItem->getPotencia() + this->potencia);
+}
+
+void Motor::aumentarTraccion() {
+
+}
+
+void Motor::aumentarVelocidad() {
+
+}
+
+void Motor::aumentarPrecio() {
+    this->ptrItem->setPrecio(ptrItem->getPrecio() + this->precio);
+}
+
 string Motor::toString() {
     stringstream s;
     s << this->ptrItem->toString() << endl;

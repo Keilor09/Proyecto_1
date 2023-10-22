@@ -58,6 +58,22 @@ void Llantas::setPotencia(int potencia)  {
     this->ptrItem->setPotencia(potencia);
 }
 
+void Llantas::aumentarPotencia() {
+
+}
+
+void Llantas::aumentarTraccion() {
+    this->ptrItem->setTraccion(this->ptrItem->getTraccion() + this->traccion);
+}
+
+void Llantas::aumentarVelocidad() {
+
+}
+
+void Llantas::aumentarPrecio() {
+    this->ptrItem->setPrecio(ptrItem->getPrecio() + this->precio);
+}
+
 string Llantas::toString() {
     stringstream s;
     s << this->ptrItem->toString() << endl;

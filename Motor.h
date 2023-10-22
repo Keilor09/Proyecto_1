@@ -37,6 +37,15 @@ class Motor : public Tienda{
         void setPotencia(int potencia); // Metodo virtual puro
 
         string toString();
+
+        virtual void aumentarPotencia();
+
+        virtual void aumentarTraccion();
+
+        virtual void aumentarVelocidad();
+
+        virtual void aumentarPrecio();
+
 };
 
 
